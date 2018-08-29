@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            width: 100vw;
+            max-width: 100%;
+            font-family: sans-serif;
+        }
+
+        header {
+            background: green;
+            min-height: 60px;
+
+        }
+
+        header a {
+            text-decoration: none;
+            font-size: 20px;
+            padding-right: 20px;
+            color: white;
+        }
+
+        header li {
+            padding-top: 15px;
+            list-style-type: none;
+            display: inline-block;
+
+        }
+
+        header ul {
+            margin: 0;
+        }
+
+        main {
+            width: 95vw;
+            max-width: 1024px;
+            min-height: calc(100vh - 40px - 60px - 22px - 16px);
+            margin: 0 auto;
+        }
+
+        footer {
+            width: 100vw;
+            max-width: 100%;
+            text-align: center;
+            background: grey;
+            color: white;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .tweet {
+            width: 30vw;
+            min-width: 300px;
+            border: 1px solid grey;
+            word-wrap: break-word;
+            margin: 0px auto 20px;
+        }
+
+        .tweet-user {
+            background: blue;
+            color: white;
+            margin-top: 0px;
+            padding: 10px 0px 10px 10px;
+        }
+
+        .tweet-text {
+            margin: 0 10px 10px;
+        }
+    </style>
+    <title>Twitter Fetch</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="#">Stuff</a> </li>
+                <li> <a href="#">Contact</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Latest tweets about kiki:</h1>
+        <div id="tweet-container">
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright 2018 - Kiki</p>
+    </footer>
+
+    <template id="tweet-template">
+        <div class="tweet">
+            <h3 class="tweet-user">Username</h3>
+            <p class="tweet-text">bla bla bla habibi sadasd asd a sd asd a sd as da sd a sd as d asd sad</p>
+        </div>
+    </template>
+
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
