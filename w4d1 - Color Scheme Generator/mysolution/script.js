@@ -1,6 +1,6 @@
 const button = document.querySelector("button");
 const divs = document.querySelectorAll("div");
-
+let currentColors = [];
 init();
 
 function init() {
@@ -17,7 +17,19 @@ function randomColor() {
 button.addEventListener("click", displayColors);
 
 function displayColors() {
+  currentColors = [];
   divs.forEach(div => {
-    div.style.background = randomColor();
+    const color = randomColor();
+
+    if (currentColors.indexOf(color)) {
+      console.log("Not existing");
+      div.style.background = color;
+      currentColors.push(color);
+    } else {
+      console.log("Color exists, retry");
+      displayColors();
+    }
   });
+
+  console.log(currentColors);
 }
