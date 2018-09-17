@@ -1,0 +1,16 @@
+body {
+  background: #e7e7e7;
+}
+
+div {
+  display: inline-block;
+  border: 1px solid grey;
+  height: 200px;
+  width: 50px;
+  margin: 10px;
+}
+
+button {
+  display: block;
+  margin-left: 20px;
+}
