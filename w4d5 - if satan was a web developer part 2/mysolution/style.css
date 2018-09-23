@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: lightblue;
+  font-family: sans-serif;
+}
+
+strong {
+  font-weight: bold;
+}
