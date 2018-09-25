@@ -1,5 +1,6 @@
 "use strict";
-
+// Of course I could use 1 instead of one as property, which makes it more easy
+// But this was a nice way thinking outside of the box ;)
 let values = {
   numbers: ["one", "two", "three", "four", "five", "six"],
   totalRolls: 0,
