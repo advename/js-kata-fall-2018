@@ -5,8 +5,8 @@ const svg = document.createElementNS(NS, "svg");
 const header = document.querySelector("header");
 
 //Circle settings
-const amountCircles = 450;
-const maxY = 20; //percentage of 100 vh
+const amountCircles = 500;
+const maxY = 40; //percentage of 100 vh
 const maxX = 100; // percentage of 100vw
 const maxR = 30; //max radius
 const fillColors = [
@@ -37,11 +37,12 @@ function init() {
   const percentageX = vw * (maxX / 100);
   console.log(percentageY);
   for (let i = 0; i < amountCircles; i++) {
+    // Default randoms
     //const x = Math.floor(Math.random() * (percentageX - 0 + 1)) + 0;
     //const y = Math.floor(Math.random() * (percentageY - 0 + 1)) + 0;
 
-    const x = Math.floor(Math.random() * (percentageX - 0 + 1)) + 0;
-    const y = randomFocusBorders(percentageY, 0);
+    const x = getRndBias(0, percentageX, 10, 1);
+    const y = getRndBias(0, percentageY, 10, 1);
     const r = Math.floor(Math.random() * (maxR - 1 + 1)) + 1;
     const circle = {
       x: x,
@@ -93,3 +94,15 @@ for (let i = 0; i < 100; i++) {
   console.log(0.05 * u);
 }
 */
+function getRndBias(min, max, bias, influence) {
+  var rnd = Math.random() * (max - min) + min, // random in range
+    mix = Math.random() * influence; // random mixer
+  return rnd * (1 - mix) + bias * mix; // mix full range and bias
+}
+
+
+
+
+
+
+wget http://nginx.org/keys/nginx_signing.key
